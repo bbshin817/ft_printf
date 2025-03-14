@@ -21,14 +21,14 @@ SRCS =	ft_printf.c \
 		libft/ft_substr.c \
 		libft/ft_utoa.c
 OBJS	= $(SRCS:.c=.o)
-INCS	= -I includes
+# INCS	= -I includes
 NAME	= libftprintf.a
 CC		= cc
 RM		= rm -f
 CFLAGS	= -Wall -Wextra -Werror
 
 %.o:%.c
-	$(CC) $(CFLAGS) $(INCS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)

@@ -10,19 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_H
-# define PRINT_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include "libft/libft.h"
 # include <stdarg.h>
 
-int	ft_printf(const char *, ...);
+int	ft_printf(const char *format, ...);
 int	ft_print_char(int c);
 int	ft_print_hex_lower(unsigned int arg);
 int	ft_print_hex_upper(unsigned int arg);
-int ft_print_int(int arg);
-int	ft_print_percent();
-int ft_print_pointer(unsigned long arg);
+int	ft_print_int(int arg);
+int	ft_print_percent(void);
+int	ft_print_pointer(unsigned long arg);
 int	ft_print_string(char *arg);
 int	ft_print_unsigned(unsigned int arg);
 int	ft_putnbr_hex(unsigned long n, int uppercase);

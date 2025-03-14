@@ -29,8 +29,8 @@ int	branch_specifier(char specifier, va_list args)
 	else if (specifier == 'X')
 		return (ft_print_hex_upper(va_arg(args, unsigned int)));
 	else if (specifier == '%')
-		return ft_print_percent();
-	return 0;
+		return (ft_print_percent());
+	return (0);
 }
 
 int	ft_printf(const char *format, ...)
@@ -55,15 +55,15 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-int	main()
-{
-	ft_printf("%%c: %c\n", 'c');
-	ft_printf("%%s: %s\n", "hello, world");
-	ft_printf("%%p: %p\n", (int *)0x1234abcd);
-	ft_printf("%%d: %d\n", 123);
-	ft_printf("%%i: %i\n", 123);
-	ft_printf("%%u: %u\n", -1);
-	ft_printf("%%x: %x\n", 232323);
-	ft_printf("%%X: %X\n", 232323);
-	ft_printf("%%%%: %%\n");
-}
+// int	main()
+// {
+// 	ft_printf("%%c: %c\n", 'c');
+// 	ft_printf("%%s: %s\n", "hello, world");
+// 	ft_printf("%%p: %p\n", (int *)0x1234abcd);
+// 	ft_printf("%%d: %d\n", 123);
+// 	ft_printf("%%i: %i\n", 123);
+// 	ft_printf("%%u: %u\n", -1);
+// 	ft_printf("%%x: %x\n", 232323);
+// 	ft_printf("%%X: %X\n", 232323);
+// 	ft_printf("%%%%: %%\n");
+// }

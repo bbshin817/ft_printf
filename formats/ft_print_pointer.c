@@ -12,7 +12,7 @@
 
 #include "../ft_printf.h"
 
-int ft_print_pointer(unsigned long arg)
+int	ft_print_pointer(unsigned long arg)
 {
 	int	len;
 
