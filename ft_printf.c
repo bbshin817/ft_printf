@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:34:26 by sbaba             #+#    #+#             */
-/*   Updated: 2025/03/14 19:00:29 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/03/19 10:16:16 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,33 +37,25 @@ int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	int		count;
+	int		strlen;
 
 	count = 0;
+	strlen = 0;
 	va_start(args, format);
 	while (format[count] != '\0')
 	{
 		if (format[count] == '%')
 		{
 			count++;
-			branch_specifier(format[count], args);
+			strlen += branch_specifier(format[count], args);
 		}
 		else
+		{
 			ft_putchar_fd(format[count], 1);
+			strlen++;
+		}
 		count++;
 	}
 	va_end(args);
-	return (count);
+	return (strlen);
 }
-
-// int	main()
-// {
-// 	ft_printf("%%c: %c\n", 'c');
-// 	ft_printf("%%s: %s\n", "hello, world");
-// 	ft_printf("%%p: %p\n", (int *)0x1234abcd);
-// 	ft_printf("%%d: %d\n", 123);
-// 	ft_printf("%%i: %i\n", 123);
-// 	ft_printf("%%u: %u\n", -1);
-// 	ft_printf("%%x: %x\n", 232323);
-// 	ft_printf("%%X: %X\n", 232323);
-// 	ft_printf("%%%%: %%\n");
-// }
