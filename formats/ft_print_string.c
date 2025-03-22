@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:52:05 by sbaba             #+#    #+#             */
-/*   Updated: 2025/03/14 18:25:06 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/03/22 16:05:35 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ int	ft_print_string(char *arg)
 	int	i;
 
 	i = 0;
+	if (!arg)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (arg[i] != '\0')
 	{
 		ft_putchar_fd(arg[i], 1);
