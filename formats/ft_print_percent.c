@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:52:00 by sbaba             #+#    #+#             */
-/*   Updated: 2025/03/14 18:27:30 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/03/23 20:11:30 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_print_percent(void)
 {
-	ft_putchar_fd('%', 1);
-	return (1);
+	return (ft_print_char('%'));
 }

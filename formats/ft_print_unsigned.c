@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:52:08 by sbaba             #+#    #+#             */
-/*   Updated: 2025/03/22 16:30:18 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/04/01 17:06:09 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ int	ft_print_unsigned(unsigned int arg)
 	char	*str;
 
 	if (0 == arg)
-	{
-		write(1, "0", 1);
-		return (1);
-	}
+		return (ft_print_char('0'));
 	str = ft_utoa(arg);
+	if (!str)
+		return (-1);
 	len = ft_print_string(str);
+	if (len < 0)
+		return (-1);
 	free(str);
 	return (len);
 }

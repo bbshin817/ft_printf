@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 18:29:14 by sbaba             #+#    #+#             */
-/*   Updated: 2025/03/22 16:11:38 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/04/01 17:03:40 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	ft_putnbr_hex(unsigned long n, int uppercase)
 {
 	int		len;
+	int		print_len;
 	char	*base;
 
 	len = 0;
@@ -23,8 +24,15 @@ int	ft_putnbr_hex(unsigned long n, int uppercase)
 	else
 		base = "0123456789abcdef";
 	if (n >= 16)
-		len += ft_putnbr_hex(n / 16, uppercase);
-	ft_putchar_fd(base[n % 16], 1);
-	len++;
+	{
+		print_len = ft_putnbr_hex(n / 16, uppercase);
+		if (print_len < 0)
+			return (-1);
+		len += print_len;
+	}
+	print_len = ft_print_char(base[n % 16]);
+	if (print_len < 0)
+		return (-1);
+	len += print_len;
 	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:52:03 by sbaba             #+#    #+#             */
-/*   Updated: 2025/03/22 16:12:39 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/03/23 20:03:52 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ int	ft_print_pointer(unsigned long arg)
 
 	len = 0;
 	if (!arg)
-	{
-		len = ft_print_string("(nil)");
-		return (len);
-	}
+		return (ft_print_string("(nil)"));
 	len += ft_print_string("0x");
 	if (arg == 0)
 		len += ft_print_string("0");

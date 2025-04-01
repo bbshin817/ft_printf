@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 15:25:08 by sbaba             #+#    #+#             */
-/*   Updated: 2025/03/14 19:10:53 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/03/23 20:00:09 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <limits.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -29,6 +28,5 @@ size_t	ft_strlen(const	char *str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int n);
-void	ft_putchar_fd(char c, int fd);
 
 #endif
