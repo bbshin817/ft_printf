@@ -23,7 +23,6 @@ CFLAGS	= -Wall -Wextra -Werror
 
 $(NAME): $(LIBFT_A) $(OBJS)
 	cp $(LIBFT_A) $(NAME)
-#	ar x $(notdir $(LIBFT_A))
 	ar rcs $(NAME) $(OBJS) *.o
 
 all: $(LIBFT_A) $(NAME)
