@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:34:30 by sbaba             #+#    #+#             */
-/*   Updated: 2025/03/22 16:27:42 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/04/01 17:25:14 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft/libft.h"
 # include <stdarg.h>
+# include <inttypes.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_print_char(int c);

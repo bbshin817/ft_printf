@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:52:08 by sbaba             #+#    #+#             */
-/*   Updated: 2025/04/01 17:06:09 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/04/01 17:29:40 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	ft_print_unsigned(unsigned int arg)
 	if (!str)
 		return (-1);
 	len = ft_print_string(str);
+	free(str);
 	if (len < 0)
 		return (-1);
-	free(str);
 	return (len);
 }

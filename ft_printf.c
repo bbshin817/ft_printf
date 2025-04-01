@@ -6,7 +6,7 @@
 /*   By: sbaba <sbaba@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 17:34:26 by sbaba             #+#    #+#             */
-/*   Updated: 2025/04/01 17:10:36 by sbaba            ###   ########.fr       */
+/*   Updated: 2025/04/01 17:25:17 by sbaba            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	branch_specifier(char specifier, va_list args)
 	else if (specifier == 's')
 		return (ft_print_string(va_arg(args, char *)));
 	else if (specifier == 'p')
-		return (ft_print_pointer(va_arg(args, unsigned int)));
+		return (ft_print_pointer(va_arg(args, uintptr_t)));
 	else if (specifier == 'd' || specifier == 'i')
 		return (ft_print_int(va_arg(args, int)));
 	else if (specifier == 'u')
